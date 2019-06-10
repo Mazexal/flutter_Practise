@@ -9,6 +9,9 @@ import 'layOutWeight/RowAndColumn.dart';
 import 'layOutWeight/FlexRoute.dart';
 import 'layOutWeight/FlowRoute.dart';
 import 'layOutWeight/StackPositionedRoute.dart';
+import 'containerWeight/PaddingRoute.dart';
+import 'containerWeight/BoxRoute.dart';
+import 'containerWeight/DecoratedBoxRoute.dart';
 
 void main() {
   debugPaintSizeEnabled = true;
@@ -31,6 +34,9 @@ class MyApp extends StatelessWidget {
         "StackPositionedRoute": (context) => StackPositionedRoute(),
         "loginRoute": (context) => LoginRoute(),
         "loginFormRoute": (context) => LoginFormRoute(),
+        'paddingRoute':(context)=>PaddingRoute(),
+        'boxRoute':(context)=>BoxRoute(),
+        'decoratedBoxRoute':(context)=>DecoratedBoxRoute()
       },
     );
   }
@@ -109,6 +115,24 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("loginForm"),
               onPressed: () {
                 Navigator.pushNamed(context, "loginFormRoute");
+              },
+            ),
+            FlatButton(
+              child: Text('paddingRoute'),
+              onPressed: (){
+                Navigator.pushNamed(context, 'paddingRoute');
+              },
+            ),
+            FlatButton(
+              child: Text('BoxRoute'),
+              onPressed: (){
+                Navigator.pushNamed(context, 'boxRoute');
+              },
+            ),
+            FlatButton(
+              child: Text('decoratedBoxRoute'),
+              onPressed: (){
+                Navigator.pushNamed(context, 'decoratedBoxRoute');
               },
             )
           ],
