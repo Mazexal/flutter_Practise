@@ -14,6 +14,6 @@ class CupertinoTestRoute extends StatelessWidget {
           color: CupertinoColors.activeBlue,
         ),
       ),
-    ); 
+    );
   }
 }

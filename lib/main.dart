@@ -13,6 +13,7 @@ import 'containerWeight/PaddingRoute.dart';
 import 'containerWeight/BoxRoute.dart';
 import 'containerWeight/DecoratedBoxRoute.dart';
 import 'containerWeight/TransformRoute.dart';
+import 'containerWeight/ContainerRoute.dart';
 
 void main() {
   debugPaintSizeEnabled = true;
@@ -35,9 +36,9 @@ class MyApp extends StatelessWidget {
         "StackPositionedRoute": (context) => StackPositionedRoute(),
         "loginRoute": (context) => LoginRoute(),
         "loginFormRoute": (context) => LoginFormRoute(),
-        'paddingRoute':(context)=>PaddingRoute(),
-        'boxRoute':(context)=>BoxRoute(),
-        'decoratedBoxRoute':(context)=>DecoratedBoxRoute()
+        'paddingRoute': (context) => PaddingRoute(),
+        'boxRoute': (context) => BoxRoute(),
+        'decoratedBoxRoute': (context) => DecoratedBoxRoute()
       },
     );
   }
@@ -120,27 +121,38 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             FlatButton(
               child: Text('paddingRoute'),
-              onPressed: (){
+              onPressed: () {
                 Navigator.pushNamed(context, 'paddingRoute');
               },
             ),
             FlatButton(
               child: Text('BoxRoute'),
-              onPressed: (){
+              onPressed: () {
                 Navigator.pushNamed(context, 'boxRoute');
               },
             ),
             FlatButton(
               child: Text('decoratedBoxRoute'),
-              onPressed: (){
+              onPressed: () {
                 Navigator.pushNamed(context, 'decoratedBoxRoute');
               },
             ),
             FlatButton(
               child: Text("TransformRoute"),
-              onPressed: (){
-                Navigator.push(context,
-                    new MaterialPageRoute(builder:(context)=>new TransformRoute()));
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new TransformRoute()));
+              },
+            ),
+            FlatButton(
+              child: Text("ContainerRoute"),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new ContainerRoute()));
               },
             )
           ],
