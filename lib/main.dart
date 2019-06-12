@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'NewRoute.dart';
-import 'RandonWords.dart';
-import 'baseWidget/CupertinoTestRoute.dart';
 import 'baseWidget/Login.dart';
 import 'baseWidget/LoginForm.dart';
+import 'containerWeight/ScaffoldTabBarRoute.dart';
 import 'layOutWeight/RowAndColumn.dart';
 import 'layOutWeight/FlexRoute.dart';
 import 'layOutWeight/FlowRoute.dart';
@@ -153,6 +151,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     context,
                     new MaterialPageRoute(
                         builder: (context) => new ContainerRoute()));
+              },
+            ),
+            FlatButton(
+              child: Text('AppBar'),
+              onPressed: (){
+                Navigator.push(context,
+                                    new MaterialPageRoute(builder:(context)=>new ScaffoldTabBarRoute()));
               },
             )
           ],
