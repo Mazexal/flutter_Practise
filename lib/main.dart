@@ -12,6 +12,7 @@ import 'containerWeight/BoxRoute.dart';
 import 'containerWeight/DecoratedBoxRoute.dart';
 import 'containerWeight/TransformRoute.dart';
 import 'containerWeight/ContainerRoute.dart';
+import 'scrollableWeight/SingleChildScrollViewRoute.dart';
 
 void main() {
   debugPaintSizeEnabled = true;
@@ -87,24 +88,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.pushNamed(context, "rowAndColumn", arguments: "hi");
                 }),
-            FlatButton(
-              child: Text('flexRoute'),
-              onPressed: () {
-                Navigator.pushNamed(context, 'flexRoute');
-              },
-            ),
-            FlatButton(
-              child: Text("flowRoute"),
-              onPressed: () {
-                Navigator.pushNamed(context, 'flowRoute');
-              },
-            ),
-            RaisedButton(
-              child: Text("StackPositionedRoute"),
-              onPressed: () {
-                Navigator.pushNamed(context, "StackPositionedRoute");
-              },
-            ),
+//            FlatButton(
+//              child: Text('flexRoute'),
+//              onPressed: () {
+//                Navigator.pushNamed(context, 'flexRoute');
+//              },
+//            ),
+//            FlatButton(
+//              child: Text("flowRoute"),
+//              onPressed: () {
+//                Navigator.pushNamed(context, 'flowRoute');
+//              },
+//            ),
+//            RaisedButton(
+//              child: Text("StackPositionedRoute"),
+//              onPressed: () {
+//                Navigator.pushNamed(context, "StackPositionedRoute");
+//              },
+//            ),
             FlatButton(
               child: Text("login"),
               onPressed: () {
@@ -158,6 +159,13 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: (){
                 Navigator.push(context,
                                     new MaterialPageRoute(builder:(context)=>new ScaffoldTabBarRoute()));
+              },
+            ),
+            FlatButton(
+              child: Text('SingleChildScrollView'),
+              onPressed: (){
+                Navigator.push(context,
+                                    new MaterialPageRoute(builder:(context)=>new SingleChildScrollViewRoute()));
               },
             )
           ],
