@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_route/scrollableWeight/ListViewRoute.dart';
 import 'baseWidget/Login.dart';
 import 'baseWidget/LoginForm.dart';
 import 'containerWeight/ScaffoldTabBarRoute.dart';
@@ -15,7 +16,8 @@ import 'containerWeight/ContainerRoute.dart';
 import 'scrollableWeight/SingleChildScrollViewRoute.dart';
 
 void main() {
-  debugPaintSizeEnabled = true;
+  //页面调试开关展示辅助线
+  debugPaintSizeEnabled = false;
   runApp(MyApp());
 }
 
@@ -166,6 +168,13 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: (){
                 Navigator.push(context,
                                     new MaterialPageRoute(builder:(context)=>new SingleChildScrollViewRoute()));
+              },
+            ),
+            FlatButton(
+              child: Text("ListViewRoute"),
+              onPressed: (){
+                Navigator.push(context,
+                                    new MaterialPageRoute(builder:(context)=>new ListViewRoute()));
               },
             )
           ],
