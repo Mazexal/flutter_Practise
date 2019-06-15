@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_route/scrollableWeight/CustomScrollViewTestRoute.dart';
 import 'package:flutter_route/scrollableWeight/GridViewRoute.dart';
 import 'package:flutter_route/scrollableWeight/ListViewRoute.dart';
+import 'package:flutter_route/scrollableWeight/ScrollControllerTestRoute.dart';
 import 'baseWidget/Login.dart';
 import 'baseWidget/LoginForm.dart';
 import 'containerWeight/BoxRoute.dart';
@@ -188,7 +189,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context,
                     new MaterialPageRoute(builder:(context)=>new CustomScrollViewTestRoute()));
               },
-            )
+            ),
+            FlatButton(
+              child: Text("ScrollControllerTestRoute "),
+              onPressed: (){
+                Navigator.push(context,
+                    new MaterialPageRoute(builder:(context)=>new ScrollControllerTestRoute ()));
+              },
+            ),
           ],
         ),
       ),
