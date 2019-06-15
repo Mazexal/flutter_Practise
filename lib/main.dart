@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_route/scrollableWeight/CustomScrollViewTestRoute.dart';
+import 'package:flutter_route/scrollableWeight/GridViewRoute.dart';
 import 'package:flutter_route/scrollableWeight/ListViewRoute.dart';
 import 'baseWidget/Login.dart';
 import 'baseWidget/LoginForm.dart';
-import 'containerWeight/ScaffoldTabBarRoute.dart';
-import 'layOutWeight/RowAndColumn.dart';
-import 'layOutWeight/FlexRoute.dart';
-import 'layOutWeight/FlowRoute.dart';
-import 'layOutWeight/StackPositionedRoute.dart';
-import 'containerWeight/PaddingRoute.dart';
 import 'containerWeight/BoxRoute.dart';
 import 'containerWeight/DecoratedBoxRoute.dart';
-import 'containerWeight/TransformRoute.dart';
-import 'containerWeight/ContainerRoute.dart';
-import 'scrollableWeight/SingleChildScrollViewRoute.dart';
+import 'containerWeight/PaddingRoute.dart';
+import 'layOutWeight/FlexRoute.dart';
+import 'layOutWeight/FlowRoute.dart';
+import 'layOutWeight/RowAndColumn.dart';
+import 'layOutWeight/StackPositionedRoute.dart';
 
 void main() {
   //页面调试开关展示辅助线
@@ -108,73 +106,87 @@ class _MyHomePageState extends State<MyHomePage> {
 //                Navigator.pushNamed(context, "StackPositionedRoute");
 //              },
 //            ),
-            FlatButton(
-              child: Text("login"),
-              onPressed: () {
-                Navigator.pushNamed(context, "loginRoute");
-              },
-            ),
-            FlatButton(
-              child: Text("loginForm"),
-              onPressed: () {
-                Navigator.pushNamed(context, "loginFormRoute");
-              },
-            ),
-            FlatButton(
-              child: Text('paddingRoute'),
-              onPressed: () {
-                Navigator.pushNamed(context, 'paddingRoute');
-              },
-            ),
-            FlatButton(
-              child: Text('BoxRoute'),
-              onPressed: () {
-                Navigator.pushNamed(context, 'boxRoute');
-              },
-            ),
-            FlatButton(
-              child: Text('decoratedBoxRoute'),
-              onPressed: () {
-                Navigator.pushNamed(context, 'decoratedBoxRoute');
-              },
-            ),
-            FlatButton(
-              child: Text("TransformRoute"),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (context) => new TransformRoute()));
-              },
-            ),
-            FlatButton(
-              child: Text("ContainerRoute"),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (context) => new ContainerRoute()));
-              },
-            ),
-            FlatButton(
-              child: Text('AppBar'),
-              onPressed: (){
-                Navigator.push(context,
-                                    new MaterialPageRoute(builder:(context)=>new ScaffoldTabBarRoute()));
-              },
-            ),
-            FlatButton(
-              child: Text('SingleChildScrollView'),
-              onPressed: (){
-                Navigator.push(context,
-                                    new MaterialPageRoute(builder:(context)=>new SingleChildScrollViewRoute()));
-              },
-            ),
+//            FlatButton(
+//              child: Text("login"),
+//              onPressed: () {
+//                Navigator.pushNamed(context, "loginRoute");
+//              },
+//            ),
+//            FlatButton(
+//              child: Text("loginForm"),
+//              onPressed: () {
+//                Navigator.pushNamed(context, "loginFormRoute");
+//              },
+//            ),
+//            FlatButton(
+//              child: Text('paddingRoute'),
+//              onPressed: () {
+//                Navigator.pushNamed(context, 'paddingRoute');
+//              },
+//            ),
+//            FlatButton(
+//              child: Text('BoxRoute'),
+//              onPressed: () {
+//                Navigator.pushNamed(context, 'boxRoute');
+//              },
+//            ),
+//            FlatButton(
+//              child: Text('decoratedBoxRoute'),
+//              onPressed: () {
+//                Navigator.pushNamed(context, 'decoratedBoxRoute');
+//              },
+//            ),
+//            FlatButton(
+//              child: Text("TransformRoute"),
+//              onPressed: () {
+//                Navigator.push(
+//                    context,
+//                    new MaterialPageRoute(
+//                        builder: (context) => new TransformRoute()));
+//              },
+//            ),
+//            FlatButton(
+//              child: Text("ContainerRoute"),
+//              onPressed: () {
+//                Navigator.push(
+//                    context,
+//                    new MaterialPageRoute(
+//                        builder: (context) => new ContainerRoute()));
+//              },
+//            ),
+//            FlatButton(
+//              child: Text('AppBar'),
+//              onPressed: (){
+//                Navigator.push(context,
+//                                    new MaterialPageRoute(builder:(context)=>new ScaffoldTabBarRoute()));
+//              },
+//            ),
+//            FlatButton(
+//              child: Text('SingleChildScrollView'),
+//              onPressed: (){
+//                Navigator.push(context,
+//                                    new MaterialPageRoute(builder:(context)=>new SingleChildScrollViewRoute()));
+//              },
+//            ),
             FlatButton(
               child: Text("ListViewRoute"),
               onPressed: (){
                 Navigator.push(context,
                                     new MaterialPageRoute(builder:(context)=>new ListViewRoute()));
+              },
+            ),
+           FlatButton(
+             child: Text("GridViewRoute"),
+             onPressed: (){
+               Navigator.push(context,
+                                   new MaterialPageRoute(builder:(context)=>new GridViewRoute()));
+             },
+           ),
+            FlatButton(
+              child: Text("CustomScrollViewTestRoute"),
+              onPressed: (){
+                Navigator.push(context,
+                    new MaterialPageRoute(builder:(context)=>new CustomScrollViewTestRoute()));
               },
             )
           ],
