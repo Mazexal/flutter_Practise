@@ -9,6 +9,9 @@ import 'baseWidget/LoginForm.dart';
 import 'containerWeight/BoxRoute.dart';
 import 'containerWeight/DecoratedBoxRoute.dart';
 import 'containerWeight/PaddingRoute.dart';
+import 'functionalityWeight/ShareDataWidget.dart';
+import 'functionalityWeight/ThemeDataRoute.dart';
+import 'functionalityWeight/WillPopScopeRoute.dart';
 import 'layOutWeight/FlexRoute.dart';
 import 'layOutWeight/FlowRoute.dart';
 import 'layOutWeight/RowAndColumn.dart';
@@ -197,6 +200,20 @@ class _MyHomePageState extends State<MyHomePage> {
                     new MaterialPageRoute(builder:(context)=>new ScrollControllerTestRoute ()));
               },
             ),
+            FlatButton(
+              child: Text("InheritedWidgetTestRoute "),
+              onPressed: (){
+                Navigator.push(context,
+                    new MaterialPageRoute(builder:(context)=>new InheritedWidgetTestRoute()));
+              },
+            ),
+            FlatButton(
+              child: Text("ThemeTestRoute"),
+              onPressed: (){
+                Navigator.push(context,
+                                    new MaterialPageRoute(builder:(context)=>new ThemeTestRoute()));
+              },
+            )
           ],
         ),
       ),
