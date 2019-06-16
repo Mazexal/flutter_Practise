@@ -9,6 +9,7 @@ import 'baseWidget/LoginForm.dart';
 import 'containerWeight/BoxRoute.dart';
 import 'containerWeight/DecoratedBoxRoute.dart';
 import 'containerWeight/PaddingRoute.dart';
+import 'eventHandlerAndNotification/ListenerRoute.dart';
 import 'functionalityWeight/ShareDataWidget.dart';
 import 'functionalityWeight/ThemeDataRoute.dart';
 import 'functionalityWeight/WillPopScopeRoute.dart';
@@ -213,7 +214,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context,
                                     new MaterialPageRoute(builder:(context)=>new ThemeTestRoute()));
               },
-            )
+            ),
+            FlatButton(
+              child: Text("ListenerRoute"),
+              onPressed: (){
+                Navigator.push(context,
+                    new MaterialPageRoute(builder:(context)=>new ListenerRoute()));
+              },
+            ),
           ],
         ),
       ),
