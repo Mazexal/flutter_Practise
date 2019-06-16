@@ -9,6 +9,7 @@ import 'baseWidget/LoginForm.dart';
 import 'containerWeight/BoxRoute.dart';
 import 'containerWeight/DecoratedBoxRoute.dart';
 import 'containerWeight/PaddingRoute.dart';
+import 'eventHandlerAndNotification/GestureDetectorTestRoute.dart';
 import 'eventHandlerAndNotification/ListenerRoute.dart';
 import 'functionalityWeight/ShareDataWidget.dart';
 import 'functionalityWeight/ThemeDataRoute.dart';
@@ -175,53 +176,76 @@ class _MyHomePageState extends State<MyHomePage> {
 //            ),
             FlatButton(
               child: Text("ListViewRoute"),
-              onPressed: (){
-                Navigator.push(context,
-                                    new MaterialPageRoute(builder:(context)=>new ListViewRoute()));
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new ListViewRoute()));
               },
             ),
-           FlatButton(
-             child: Text("GridViewRoute"),
-             onPressed: (){
-               Navigator.push(context,
-                                   new MaterialPageRoute(builder:(context)=>new GridViewRoute()));
-             },
-           ),
+            FlatButton(
+              child: Text("GridViewRoute"),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new GridViewRoute()));
+              },
+            ),
             FlatButton(
               child: Text("CustomScrollViewTestRoute"),
-              onPressed: (){
-                Navigator.push(context,
-                    new MaterialPageRoute(builder:(context)=>new CustomScrollViewTestRoute()));
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new CustomScrollViewTestRoute()));
               },
             ),
             FlatButton(
               child: Text("ScrollControllerTestRoute "),
-              onPressed: (){
-                Navigator.push(context,
-                    new MaterialPageRoute(builder:(context)=>new ScrollControllerTestRoute ()));
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new ScrollControllerTestRoute()));
               },
             ),
             FlatButton(
               child: Text("InheritedWidgetTestRoute "),
-              onPressed: (){
-                Navigator.push(context,
-                    new MaterialPageRoute(builder:(context)=>new InheritedWidgetTestRoute()));
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new InheritedWidgetTestRoute()));
               },
             ),
             FlatButton(
               child: Text("ThemeTestRoute"),
-              onPressed: (){
-                Navigator.push(context,
-                                    new MaterialPageRoute(builder:(context)=>new ThemeTestRoute()));
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new ThemeTestRoute()));
               },
             ),
             FlatButton(
               child: Text("ListenerRoute"),
-              onPressed: (){
-                Navigator.push(context,
-                    new MaterialPageRoute(builder:(context)=>new ListenerRoute()));
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new ListenerRoute()));
               },
             ),
+            FlatButton(
+              child: Text('GestureDetectorTestRoute'),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new GestureDetectorTestRoute()));
+              },
+            )
           ],
         ),
       ),
