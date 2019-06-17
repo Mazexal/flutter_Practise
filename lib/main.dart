@@ -11,6 +11,7 @@ import 'containerWeight/DecoratedBoxRoute.dart';
 import 'containerWeight/PaddingRoute.dart';
 import 'eventHandlerAndNotification/GestureDetectorTestRoute.dart';
 import 'eventHandlerAndNotification/ListenerRoute.dart';
+import 'eventHandlerAndNotification/NotificationListenerRoute.dart';
 import 'functionalityWeight/ShareDataWidget.dart';
 import 'functionalityWeight/ThemeDataRoute.dart';
 import 'functionalityWeight/WillPopScopeRoute.dart';
@@ -245,7 +246,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     new MaterialPageRoute(
                         builder: (context) => new GestureDetectorTestRoute()));
               },
-            )
+            ),
+            FlatButton(
+              child: Text("NotificationListenerRoute"),
+              onPressed: (){
+                Navigator.push(context,
+                                    new MaterialPageRoute(builder:(context)=>new NotificationListenerRoute()));
+              },
+            ),
           ],
         ),
       ),
