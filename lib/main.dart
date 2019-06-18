@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_route/scrollableWeight/CustomScrollViewTestRoute.dart';
-import 'package:flutter_route/scrollableWeight/GridViewRoute.dart';
-import 'package:flutter_route/scrollableWeight/ListViewRoute.dart';
-import 'package:flutter_route/scrollableWeight/ScrollControllerTestRoute.dart';
+import 'package:flutter_route/scrollableWidght/CustomScrollViewTestRoute.dart';
+import 'package:flutter_route/scrollableWidght/GridViewRoute.dart';
+import 'package:flutter_route/scrollableWidght/ListViewRoute.dart';
+import 'package:flutter_route/scrollableWidght/ScrollControllerTestRoute.dart';
+
+import 'animationWidght/ScaleAnimationRoute.dart';
 import 'baseWidget/Login.dart';
 import 'baseWidget/LoginForm.dart';
-import 'containerWeight/BoxRoute.dart';
-import 'containerWeight/DecoratedBoxRoute.dart';
-import 'containerWeight/PaddingRoute.dart';
+import 'containerWidght/BoxRoute.dart';
+import 'containerWidght/DecoratedBoxRoute.dart';
+import 'containerWidght/PaddingRoute.dart';
 import 'eventHandlerAndNotification/GestureDetectorTestRoute.dart';
 import 'eventHandlerAndNotification/ListenerRoute.dart';
 import 'eventHandlerAndNotification/NotificationListenerRoute.dart';
-import 'functionalityWeight/ShareDataWidget.dart';
-import 'functionalityWeight/ThemeDataRoute.dart';
-import 'functionalityWeight/WillPopScopeRoute.dart';
-import 'layOutWeight/FlexRoute.dart';
-import 'layOutWeight/FlowRoute.dart';
-import 'layOutWeight/RowAndColumn.dart';
-import 'layOutWeight/StackPositionedRoute.dart';
+import 'functionalityWidght/ShareDataWidget.dart';
+import 'functionalityWidght/ThemeDataRoute.dart';
+import 'layOutWidght/FlexRoute.dart';
+import 'layOutWidght/FlowRoute.dart';
+import 'layOutWidght/RowAndColumn.dart';
+import 'layOutWidght/StackPositionedRoute.dart';
 
 void main() {
   //页面调试开关展示辅助线
@@ -175,83 +176,90 @@ class _MyHomePageState extends State<MyHomePage> {
 //                                    new MaterialPageRoute(builder:(context)=>new SingleChildScrollViewRoute()));
 //              },
 //            ),
+//            FlatButton(
+//              child: Text("ListViewRoute"),
+//              onPressed: () {
+//                Navigator.push(
+//                    context,
+//                    new MaterialPageRoute(
+//                        builder: (context) => new ListViewRoute()));
+//              },
+//            ),
+//            FlatButton(
+//              child: Text("GridViewRoute"),
+//              onPressed: () {
+//                Navigator.push(
+//                    context,
+//                    new MaterialPageRoute(
+//                        builder: (context) => new GridViewRoute()));
+//              },
+//            ),
+//            FlatButton(
+//              child: Text("CustomScrollViewTestRoute"),
+//              onPressed: () {
+//                Navigator.push(
+//                    context,
+//                    new MaterialPageRoute(
+//                        builder: (context) => new CustomScrollViewTestRoute()));
+//              },
+//            ),
+//            FlatButton(
+//              child: Text("ScrollControllerTestRoute "),
+//              onPressed: () {
+//                Navigator.push(
+//                    context,
+//                    new MaterialPageRoute(
+//                        builder: (context) => new ScrollControllerTestRoute()));
+//              },
+//            ),
+//            FlatButton(
+//              child: Text("InheritedWidgetTestRoute "),
+//              onPressed: () {
+//                Navigator.push(
+//                    context,
+//                    new MaterialPageRoute(
+//                        builder: (context) => new InheritedWidgetTestRoute()));
+//              },
+//            ),
+//            FlatButton(
+//              child: Text("ThemeTestRoute"),
+//              onPressed: () {
+//                Navigator.push(
+//                    context,
+//                    new MaterialPageRoute(
+//                        builder: (context) => new ThemeTestRoute()));
+//              },
+//            ),
+//            FlatButton(
+//              child: Text("ListenerRoute"),
+//              onPressed: () {
+//                Navigator.push(
+//                    context,
+//                    new MaterialPageRoute(
+//                        builder: (context) => new ListenerRoute()));
+//              },
+//            ),
+//            FlatButton(
+//              child: Text('GestureDetectorTestRoute'),
+//              onPressed: () {
+//                Navigator.push(
+//                    context,
+//                    new MaterialPageRoute(
+//                        builder: (context) => new GestureDetectorTestRoute()));
+//              },
+//            ),
+//            FlatButton(
+//              child: Text("NotificationListenerRoute"),
+//              onPressed: (){
+//                Navigator.push(context,
+//                                    new MaterialPageRoute(builder:(context)=>new NotificationListenerRoute()));
+//              },
+//            ),
             FlatButton(
-              child: Text("ListViewRoute"),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (context) => new ListViewRoute()));
-              },
-            ),
-            FlatButton(
-              child: Text("GridViewRoute"),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (context) => new GridViewRoute()));
-              },
-            ),
-            FlatButton(
-              child: Text("CustomScrollViewTestRoute"),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (context) => new CustomScrollViewTestRoute()));
-              },
-            ),
-            FlatButton(
-              child: Text("ScrollControllerTestRoute "),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (context) => new ScrollControllerTestRoute()));
-              },
-            ),
-            FlatButton(
-              child: Text("InheritedWidgetTestRoute "),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (context) => new InheritedWidgetTestRoute()));
-              },
-            ),
-            FlatButton(
-              child: Text("ThemeTestRoute"),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (context) => new ThemeTestRoute()));
-              },
-            ),
-            FlatButton(
-              child: Text("ListenerRoute"),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (context) => new ListenerRoute()));
-              },
-            ),
-            FlatButton(
-              child: Text('GestureDetectorTestRoute'),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (context) => new GestureDetectorTestRoute()));
-              },
-            ),
-            FlatButton(
-              child: Text("NotificationListenerRoute"),
+              child: Text("ScaleAnimationRoute"),
               onPressed: (){
                 Navigator.push(context,
-                                    new MaterialPageRoute(builder:(context)=>new NotificationListenerRoute()));
+                    new MaterialPageRoute(builder:(context)=>new ScaleAnimationRoute()));
               },
             ),
           ],
