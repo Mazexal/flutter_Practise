@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_route/scrollableWidght/CustomScrollViewTestRoute.dart';
@@ -5,6 +6,7 @@ import 'package:flutter_route/scrollableWidght/GridViewRoute.dart';
 import 'package:flutter_route/scrollableWidght/ListViewRoute.dart';
 import 'package:flutter_route/scrollableWidght/ScrollControllerTestRoute.dart';
 
+import 'animationWidght/FadeRoute.dart';
 import 'animationWidght/ScaleAnimationRoute.dart';
 import 'baseWidget/Login.dart';
 import 'baseWidget/LoginForm.dart';
@@ -257,9 +259,20 @@ class _MyHomePageState extends State<MyHomePage> {
 //            ),
             FlatButton(
               child: Text("ScaleAnimationRoute"),
-              onPressed: (){
-                Navigator.push(context,
-                    new MaterialPageRoute(builder:(context)=>new ScaleAnimationRoute()));
+              onPressed: () {
+//                Navigator.push(context, CupertinoPageRoute(builder: (context) { //左右滑动进入新页面
+//                  return new ScaleAnimationRoute();
+//                }));
+//                Navigator.push(context, PageRouteBuilder(
+//                    transitionDuration: Duration(milliseconds: 500), //动画时间为500毫秒
+//                    pageBuilder: (BuildContext context, Animation animation,
+//                        Animation secondaryAnimation) {
+//                      return new FadeTransition( //使用渐隐渐入过渡,
+//                          opacity: animation,
+//                          child: ScaleAnimationRoute() //路由B
+//                      );
+//                    }));
+                Navigator.push(context,FadeRoute(builder:(context){return ScaleAnimationRoute();}));
               },
             ),
           ],
