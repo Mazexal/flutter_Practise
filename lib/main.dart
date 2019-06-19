@@ -5,6 +5,7 @@ import 'package:flutter/rendering.dart';
 import 'animationWidght/FadeRoute.dart';
 import 'animationWidght/HeroRoute.dart';
 import 'animationWidght/ScaleAnimationRoute.dart';
+import 'animationWidght/StaggerDemo.dart';
 import 'baseWidget/Login.dart';
 import 'baseWidget/LoginForm.dart';
 import 'containerWidght/BoxRoute.dart';
@@ -278,6 +279,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         builder: (context) => new HeroAnimationRoute()));
               },
             ),
+            FlatButton(
+              child: Text("StaggerRoute"),
+              onPressed: (){
+                Navigator.push(context,
+                                    new MaterialPageRoute(builder:(context)=>new StaggerRoute()));
+              },
+            )
           ],
         ),
       ),

@@ -4,7 +4,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/scheduler.dart';
 
-class anmimationIntro {
+class AnmimationIntro {
 
   final CurvedAnimation curve =
       new CurvedAnimation(parent: null, curve: Curves.easeIn);
