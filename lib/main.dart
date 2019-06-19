@@ -1,23 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_route/scrollableWidght/CustomScrollViewTestRoute.dart';
-import 'package:flutter_route/scrollableWidght/GridViewRoute.dart';
-import 'package:flutter_route/scrollableWidght/ListViewRoute.dart';
-import 'package:flutter_route/scrollableWidght/ScrollControllerTestRoute.dart';
 
 import 'animationWidght/FadeRoute.dart';
+import 'animationWidght/HeroRoute.dart';
 import 'animationWidght/ScaleAnimationRoute.dart';
 import 'baseWidget/Login.dart';
 import 'baseWidget/LoginForm.dart';
 import 'containerWidght/BoxRoute.dart';
 import 'containerWidght/DecoratedBoxRoute.dart';
 import 'containerWidght/PaddingRoute.dart';
-import 'eventHandlerAndNotification/GestureDetectorTestRoute.dart';
-import 'eventHandlerAndNotification/ListenerRoute.dart';
-import 'eventHandlerAndNotification/NotificationListenerRoute.dart';
-import 'functionalityWidght/ShareDataWidget.dart';
-import 'functionalityWidght/ThemeDataRoute.dart';
 import 'layOutWidght/FlexRoute.dart';
 import 'layOutWidght/FlowRoute.dart';
 import 'layOutWidght/RowAndColumn.dart';
@@ -272,7 +264,18 @@ class _MyHomePageState extends State<MyHomePage> {
 //                          child: ScaleAnimationRoute() //路由B
 //                      );
 //                    }));
-                Navigator.push(context,FadeRoute(builder:(context){return ScaleAnimationRoute();}));
+                Navigator.push(context, FadeRoute(builder: (context) {
+                  return ScaleAnimationRoute();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("HeroAnimationRoute"),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new HeroAnimationRoute()));
               },
             ),
           ],
