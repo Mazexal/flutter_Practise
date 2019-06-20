@@ -11,6 +11,7 @@ import 'baseWidget/LoginForm.dart';
 import 'containerWidght/BoxRoute.dart';
 import 'containerWidght/DecoratedBoxRoute.dart';
 import 'containerWidght/PaddingRoute.dart';
+import 'customizeWidget/GradientButton.dart';
 import 'layOutWidght/FlexRoute.dart';
 import 'layOutWidght/FlowRoute.dart';
 import 'layOutWidght/RowAndColumn.dart';
@@ -281,11 +282,21 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             FlatButton(
               child: Text("StaggerRoute"),
-              onPressed: (){
-                Navigator.push(context,
-                                    new MaterialPageRoute(builder:(context)=>new StaggerRoute()));
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new StaggerRoute()));
               },
-            )
+            ),
+            GradientButton(
+              colors: [Colors.orange, Colors.red],
+              height: 50.0,
+              child: Text("Submit"),
+              onTap: () {
+                print("button cilic");
+              },
+            ),
           ],
         ),
       ),
