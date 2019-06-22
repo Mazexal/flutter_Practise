@@ -12,6 +12,7 @@ import 'containerWidght/BoxRoute.dart';
 import 'containerWidght/DecoratedBoxRoute.dart';
 import 'containerWidght/PaddingRoute.dart';
 import 'customizeWidget/GradientButton.dart';
+import 'customizeWidget/TurnBoxTestRoute.dart';
 import 'layOutWidght/FlexRoute.dart';
 import 'layOutWidght/FlowRoute.dart';
 import 'layOutWidght/RowAndColumn.dart';
@@ -292,9 +293,10 @@ class _MyHomePageState extends State<MyHomePage> {
             GradientButton(
               colors: [Colors.orange, Colors.red],
               height: 50.0,
-              child: Text("Submit"),
+              child: Text("TurnBoxTestRoute"),
               onTap: () {
-                print("button cilic");
+                Navigator.push(context,
+                                    new MaterialPageRoute(builder:(context)=>new TurnBoxShowState()));
               },
             ),
           ],
