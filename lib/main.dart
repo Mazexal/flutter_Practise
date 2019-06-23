@@ -11,6 +11,7 @@ import 'baseWidget/LoginForm.dart';
 import 'containerWidght/BoxRoute.dart';
 import 'containerWidght/DecoratedBoxRoute.dart';
 import 'containerWidght/PaddingRoute.dart';
+import 'customizeWidget/CustomPainterRoute.dart';
 import 'customizeWidget/GradientButton.dart';
 import 'customizeWidget/TurnBoxTestRoute.dart';
 import 'layOutWidght/FlexRoute.dart';
@@ -296,9 +297,17 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("TurnBoxTestRoute"),
               onTap: () {
                 Navigator.push(context,
-                                    new MaterialPageRoute(builder:(context)=>new TurnBoxShowState()));
+                                    new MaterialPageRoute(builder:(context)=>new TurnBoxShowState())); //tofix
               },
             ),
+            FlatButton(
+              child: Text("CustomPainterRoute"),
+              onPressed: (){
+                Navigator.push(context,
+                                    new MaterialPageRoute(builder:(context)=>new CustomPainterRoute()));
+              },
+            ),
+
           ],
         ),
       ),
