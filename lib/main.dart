@@ -13,6 +13,7 @@ import 'containerWidght/DecoratedBoxRoute.dart';
 import 'containerWidght/PaddingRoute.dart';
 import 'customizeWidget/CustomPainterRoute.dart';
 import 'customizeWidget/GradientButton.dart';
+import 'customizeWidget/GradientCircularProgressRoute.dart';
 import 'customizeWidget/TurnBoxTestRoute.dart';
 import 'layOutWidght/FlexRoute.dart';
 import 'layOutWidght/FlowRoute.dart';
@@ -307,6 +308,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                     new MaterialPageRoute(builder:(context)=>new CustomPainterRoute()));
               },
             ),
+            FlatButton(
+              child: Text("GradientCircularProgressRoute"),
+              onPressed: (){
+                Navigator.push(context,
+                                    new MaterialPageRoute(builder:(context)=>new GradientCircularProgressRoute()));
+              },
+            )
 
           ],
         ),
