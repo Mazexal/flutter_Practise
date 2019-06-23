@@ -3,18 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'animationWidght/FadeRoute.dart';
-import 'animationWidght/HeroRoute.dart';
 import 'animationWidght/ScaleAnimationRoute.dart';
-import 'animationWidght/StaggerDemo.dart';
 import 'baseWidget/Login.dart';
 import 'baseWidget/LoginForm.dart';
 import 'containerWidght/BoxRoute.dart';
 import 'containerWidght/DecoratedBoxRoute.dart';
 import 'containerWidght/PaddingRoute.dart';
-import 'customizeWidget/CustomPainterRoute.dart';
-import 'customizeWidget/GradientButton.dart';
-import 'customizeWidget/GradientCircularProgressRoute.dart';
-import 'customizeWidget/TurnBoxTestRoute.dart';
+import 'fileIOAndWebIO/FileOperationRoute.dart';
+import 'fileIOAndWebIO/HttpTestRoute.dart';
 import 'layOutWidght/FlexRoute.dart';
 import 'layOutWidght/FlowRoute.dart';
 import 'layOutWidght/RowAndColumn.dart';
@@ -274,48 +270,63 @@ class _MyHomePageState extends State<MyHomePage> {
                 }));
               },
             ),
-            FlatButton(
-              child: Text("HeroAnimationRoute"),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (context) => new HeroAnimationRoute()));
-              },
-            ),
-            FlatButton(
-              child: Text("StaggerRoute"),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (context) => new StaggerRoute()));
-              },
-            ),
-            GradientButton(
-              colors: [Colors.orange, Colors.red],
-              height: 50.0,
-              child: Text("TurnBoxTestRoute"),
-              onTap: () {
-                Navigator.push(context,
-                                    new MaterialPageRoute(builder:(context)=>new TurnBoxShowState())); //tofix
-              },
-            ),
-            FlatButton(
-              child: Text("CustomPainterRoute"),
-              onPressed: (){
-                Navigator.push(context,
-                                    new MaterialPageRoute(builder:(context)=>new CustomPainterRoute()));
-              },
-            ),
-            FlatButton(
-              child: Text("GradientCircularProgressRoute"),
-              onPressed: (){
-                Navigator.push(context,
-                                    new MaterialPageRoute(builder:(context)=>new GradientCircularProgressRoute()));
-              },
-            )
+//            FlatButton(
+//              child: Text("HeroAnimationRoute"),
+//              onPressed: () {
+//                Navigator.push(
+//                    context,
+//                    new MaterialPageRoute(
+//                        builder: (context) => new HeroAnimationRoute()));
+//              },
+//            ),
+//            FlatButton(
+//              child: Text("StaggerRoute"),
+//              onPressed: () {
+//                Navigator.push(
+//                    context,
+//                    new MaterialPageRoute(
+//                        builder: (context) => new StaggerRoute()));
+//              },
+//            ),
+//            GradientButton(
+//              colors: [Colors.orange, Colors.red],
+//              height: 50.0,
+//              child: Text("TurnBoxTestRoute"),
+//              onTap: () {
+//                Navigator.push(context,
+//                                    new MaterialPageRoute(builder:(context)=>new TurnBoxShowState())); //tofix
+//              },
+//            ),
+//            FlatButton(
+//              child: Text("CustomPainterRoute"),
+//              onPressed: (){
+//                Navigator.push(context,
+//                                    new MaterialPageRoute(builder:(context)=>new CustomPainterRoute()));
+//              },
+//            ),
+//            FlatButton(
+//              child: Text("GradientCircularProgressRoute"),
+//              onPressed: (){
+//                Navigator.push(context,
+//                                    new MaterialPageRoute(builder:(context)=>new GradientCircularProgressRoute()));
+//              },
+//            )
 
+             FlatButton(
+               child: Text("FileOperationRoute"),
+               onPressed: (){
+                 Navigator.push(context,
+                                     new MaterialPageRoute(builder:(context)=>new FileOperationRoute()));
+               },
+             ),
+
+            FlatButton(
+              child: Text("HttpTestRoute"),
+              onPressed: (){
+                Navigator.push(context,
+                    new MaterialPageRoute(builder:(context)=>new HttpTestRoute()));
+              },
+            ),
           ],
         ),
       ),
