@@ -9,6 +9,7 @@ import 'baseWidget/LoginForm.dart';
 import 'containerWidght/BoxRoute.dart';
 import 'containerWidght/DecoratedBoxRoute.dart';
 import 'containerWidght/PaddingRoute.dart';
+import 'extraWidght/StaggerdTestRoute.dart';
 import 'fileIOAndWebIO/FileOperationRoute.dart';
 import 'fileIOAndWebIO/HttpTestRoute.dart';
 import 'layOutWidght/FlexRoute.dart';
@@ -325,6 +326,13 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: (){
                 Navigator.push(context,
                     new MaterialPageRoute(builder:(context)=>new HttpTestRoute()));
+              },
+            ),
+            FlatButton(
+              child: Text("StaggerdTestRoute"),
+              onPressed: (){
+                Navigator.push(context,
+                                    new MaterialPageRoute(builder:(context)=>new StaggerdTestRoute()));
               },
             ),
           ],
