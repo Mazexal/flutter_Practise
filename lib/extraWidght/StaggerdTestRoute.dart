@@ -8,7 +8,7 @@ class StaggerdTestRoute extends StatelessWidget{
           appBar: AppBar(title: Text('瀑布式布局'),),
           body:   new StaggeredGridView.countBuilder(
             crossAxisCount: 4,
-            itemCount: 8,
+            itemCount: 108,
             itemBuilder: (BuildContext context, int index) => new Container(
                 color: Colors.green[400],
                 child: new Center(
